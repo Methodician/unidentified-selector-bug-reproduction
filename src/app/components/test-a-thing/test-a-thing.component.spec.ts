@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MockStore, provideMockStore } from '@ngrx/store/testing';
 
 import { TestAThingComponent } from './test-a-thing.component';
 
@@ -8,9 +9,9 @@ describe('TestAThingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TestAThingComponent ]
-    })
-    .compileComponents();
+      declarations: [TestAThingComponent],
+      providers: [provideMockStore()],
+    }).compileComponents();
   });
 
   beforeEach(() => {
